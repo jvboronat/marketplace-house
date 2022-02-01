@@ -29,12 +29,12 @@ function SignIn() {
           <main>
             <form>
               <input type="email" className="emailInput" placeholder='Email' 
-                id="email" onChange={onChange}/>
+                id="email" value= {email} onChange={onChange}/>
 
               <div className="passwordInputDiv">
                 <input type = {showPassword ? 'text' : 'password'} 
                 className='passwordInput' placeholder='Password' 
-                id='password' onChange={onChange}/>
+                id='password' value= {password} onChange={onChange}/>
 
                 <img src={visibilityIcon} alt='show password' className='showPassword'
                     onClick={() => setShowPassword((prevState) => !prevState)}/>
