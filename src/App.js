@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Navbar from './components/Navbar';
+import PrivateRoutes from './components/PrivateRoutes';
 
 function App() {
   return (
@@ -15,8 +16,10 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element ={<Explore/>}/>
-          <Route path='/offers' element ={<Offers/>}/>
-          <Route path='/profile' element ={<Profile/>}/>
+          <Route path='/offers' element ={<Offers/>}/>         
+          <Route path='/profile' element ={<PrivateRoutes/>}>
+              <Route path='/profile' element ={<Profile/>}/>
+          </Route>          
           <Route path='/sign-in' element ={<SignIn/>}/>
           <Route path='/sign-up' element ={<SignUp/>}/>
           <Route path='/forgot-password' element ={<ForgotPassword/>}/>
